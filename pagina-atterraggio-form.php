@@ -1,7 +1,7 @@
 <?php
 
   $paragrafo = $_GET['paragrafo'];
-  $password = $GET['password'];
+  $lunghezza_paragrafo = strlen($paragrafo);
 
 ?>
 <!DOCTYPE html>
@@ -16,8 +16,7 @@
 <body>
   <div class="container my-5 ">
     <a href="form.html">Torna al form</a>
-    <h1>Paragrafo: <?php echo $paragrafo ?> </h1>
-    <h2>Password: <?php echo $password ?> </h2>
+    <h1>Il paragrafo inserito è: "<?php echo $paragrafo ?>" ed è lungo <?php echo $lunghezza_paragrafo ?> caratteri.</h1>
   </div>
 </body>
 </html>
