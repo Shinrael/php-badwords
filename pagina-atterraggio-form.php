@@ -1,7 +1,10 @@
 <?php
 
   $paragrafo = $_GET['paragrafo'];
+  $parola = $_GET['parola'];
+
   $lunghezza_paragrafo = strlen($paragrafo);
+  $paragrafo_senza_parola = str_replace($parola, '***', $paragrafo)
 
 ?>
 <!DOCTYPE html>
@@ -14,9 +17,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="container my-5 ">
-    <a href="form.html">Torna al form</a>
+  <a href="form.html">Torna al form</a>
+  <div class="container my-5 bg-info">    
     <h1>Il paragrafo inserito è: "<?php echo $paragrafo ?>" ed è lungo <?php echo $lunghezza_paragrafo ?> caratteri.</h1>
+  </div>
+  <div class="container bg-primary ">
+    <h1>Il paragrafo originale è : "<?php echo $paragrafo ?>"</h1>
+    <h2>Il paragrafo con la parola censurata è : "<?php echo $paragrafo_senza_parola ?>"</h2>
   </div>
 </body>
 </html>
