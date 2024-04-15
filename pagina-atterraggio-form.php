@@ -1,7 +1,7 @@
 <?php
-
-  $paragrafo = $_GET['paragrafo'];
-  $parola = $_GET['parola'];
+  
+  $paragrafo = $_POST['paragrafo'];
+  $parola = $_POST['parola'];
 
   $lunghezza_paragrafo = strlen($paragrafo);
   $paragrafo_senza_parola = str_replace($parola, '***', $paragrafo)
